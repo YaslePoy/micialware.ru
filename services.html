@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Услуги программиста">
+    <title>Услуги</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #1a1a2e, #16213e);
+            color: white;
+        }
+        header {
+            text-align: center;
+            padding-top: 0px;
+            padding-bottom: 2rem;
+        }
+        nav {
+            margin-bottom: 32px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        main {
+            padding: 2rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 2rem;
+            backdrop-filter: blur(5px);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h1, h2 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .service-card .content {
+            flex: 1;
+        }
+        .service-card img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .service-card h3 {
+            margin-top: 0;
+            color: #e94560;
+        }
+        .service-card .terms-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #e94560;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .service-card .terms-link:hover {
+            color: #ff6b81;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#flagships">Флагманы</a></li>
+                <li><a href="index.html#projects">Другие проекты</a></li>
+                <li><a href="services.html">Услуги</a></li>
+            </ul>
+        </nav>
+        <h1>Услуги</h1>
+    </header>
+
+    <main>
+        <div class="service-card">
+            <img src="img/arma76.png" alt="Raspberry Pi хостинг">
+            <div class="content">
+                <h3>Простой хостинг</h3>
+                <p>Хостинг на базе Raspberry Pi с предоставлением субдомена. Идеальное решение для небольших проектов и тестирования.</p>
+                <ul>
+                    <li>Хостинг на Raspberry Pi</li>
+                    <li>Предоставление субдомена</li>
+                    <li>Подходит для небольших проектов</li>
+                </ul>
+                <a href="terms-basic.html" class="terms-link">Условия использования →</a>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="img/7700x.webp" alt="Ryzen сервер">
+            <div class="content">
+                <h3>Unlimited-хостинг</h3>
+                <p>Мощный хостинг на сервере с процессором Ryzen 7 7700x. Максимальная производительность для ваших проектов.</p>
+                <ul>
+                    <li>Хостинг на Ryzen 7 7700x</li>
+                    <li>Высокая производительность</li>
+                    <li>Подходит для крупных проектов</li>
+                </ul>
+                <a href="terms-unlimited.html" class="terms-link">Условия использования →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Моя страница. Все права защищены.</p>
+    </footer>
+</body>
+</html> 
