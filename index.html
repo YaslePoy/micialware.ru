@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Базовая HTML страница">
     <link rel="icon" type="image/png" href="img/icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Моя страница</title>
     <style>
@@ -136,10 +134,8 @@
 
         .no-margin {
             margin: 0;
-        }
-
-        .bigger {
-            font-size: 1.4rem;
+            font-size: 22px;
+            margin-bottom: 7px;
         }
 
         @media (max-width: 768px) {
@@ -191,19 +187,19 @@
 
     <main>
         <section>
-            <h1>Привет, меня зовут Миша...</h1>
+            <h1 style="font-size: 32px">Привет, меня зовут Миша...</h1>
             <p class="no-margin">Я вообще много кто, но сейчас я программист</p>
             <p class="no-margin">Пишу всякие разные проектики на C#, Rust, немного на Python и не много занимаюсь хостингом</p>
-            <p class="bigger">Мои главные проекты которыми я сейчас занимаюсь - <a href="flagships.html">Флагманы</a>. В
+            <p class="no-margin">Мои главные проекты которыми я сейчас занимаюсь - <a href="flagships.html">Флагманы</a>. В
                 них я вкладываю большую часть своих усилинй на данный момент.
                 Они могут быть довольно полезными для обычной зазработки, и я даже сам их использую для других своих
                 проектов. Очень советую ознакомиться)))</p>
-            <p class="">Так же тут есть и другие проекты, которые не являются моими основными и я занимаюсь ими
+            <p class="no-margin">Так же тут есть и другие проекты, которые не являются моими основными и я занимаюсь ими
                 когда доходят руки после флагманов. Они тоже в целом прикольные, но врядли особо полезные, разве что
                 можно поглазесь. Так же тут есть старые проекты, которые уже врядли когда-либо будут развиваться и
                 затрагиваться дальше</p>
 
-            <p>
+            <p class="no-margin">
                 Большинство кода который мной написан лежит в открытом доступе на моем <a href="https://github.com/YaslePoy">Гитхабе</a>
             </p>
             <h2 class="center">Немножечко статистики</h2>
