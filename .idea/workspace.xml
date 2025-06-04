@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee891075-11e2-49a6-87c8-a1024423abbb" name="Changes" comment="" />
+    <list default="true" id="ee891075-11e2-49a6-87c8-a1024423abbb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/terms-basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/terms-basic.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +15,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "YaslePoy"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/YaslePoy/micialware.ru.git",
+    "accountId": "12da5cab-63a9-4f0e-b1bf-1c1551d039ec"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -51,7 +65,7 @@
       <updated>1748896607036</updated>
       <workItem from="1748896609095" duration="145000" />
       <workItem from="1748897135743" duration="441000" />
-      <workItem from="1748898000443" duration="153000" />
+      <workItem from="1748898000443" duration="990000" />
     </task>
     <servers />
   </component>

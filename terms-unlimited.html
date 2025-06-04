@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Условия использования простого хостинга">
-    <title>Условия использования - Простой хостинг</title>
+    <meta name="description" content="Условия использования Unlimited-хостинга">
+    <title>Условия использования - Unlimited-хостинг</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -145,14 +145,14 @@
                 <li><a href="services.html">Услуги</a></li>
             </ul>
         </nav>
-        <h1>Условия использования простого хостинга</h1>
+        <h1>Условия использования Unlimited-хостинга</h1>
     </header>
 
     <main>
         <h2>Оборудование</h2>
-        <p>Для простого хостинга используется Raspberry Pi 5 - это одноплатный компьютер, который представляет собой полноценную вычислительную систему размером с банковскую карту.</p>
+        <p>Для Unlimited-хостинга используется мощный сервер на базе процессора AMD Ryzen 7 7700X с доступом к ресурсам видеокарты NVIDIA RTX 4060 Ti.</p>
         
-        <h3>Характеристики используемой модели:</h3>
+        <h3>Характеристики сервера:</h3>
         <table class="specs-table">
             <tr>
                 <th>Компонент</th>
@@ -160,45 +160,34 @@
             </tr>
             <tr>
                 <td>Процессор</td>
-                <td>Broadcom BCM2712 (4 ядра ARM Cortex-A76, 2.4 ГГц)</td>
+                <td>AMD Ryzen 7 7700X (8 ядер, 16 потоков, до 5.4 ГГц)</td>
             </tr>
             <tr>
                 <td>Оперативная память</td>
-                <td>8 ГБ LPDDR4X-4267</td>
+                <td>64 ГБ DDR5</td>
             </tr>
             <tr>
-                <td>Графика</td>
-                <td>VideoCore VII, поддержка 4K@60fps</td>
+                <td>Видеокарта</td>
+                <td>NVIDIA RTX 4060 Ti (8 ГБ GDDR6)</td>
             </tr>
             <tr>
                 <td>Сеть</td>
-                <td>2.4/5.0 ГГц IEEE 802.11ac Wi-Fi, Bluetooth 5.0, Gigabit Ethernet</td>
-            </tr>
-            <tr>
-                <td>Порты</td>
-                <td>2 × USB 3.0, 2 × USB 2.0, 2 × micro-HDMI 2.0, GPIO</td>
+                <td>Gigabit Ethernet</td>
             </tr>
             <tr>
                 <td>Хранение</td>
-                <td>microSD карта (до 128 ГБ)</td>
+                <td>NVMe SSD</td>
             </tr>
         </table>
 
-        <h2>Ограничения и особенности</h2>
+        <h2>Возможности</h2>
         <ul>
-            <li>Хостинг подходит для небольших веб-проектов с низкой нагрузкой</li>
-            <li>Предоставляется субдомен вида: ваш-проект.micialware.ru</li>
-            <li>Поддерживаются статические сайты и небольшие веб-приложения</li>
-            <li>Ограниченные ресурсы процессора и памяти</li>
-            <li>Нет гарантии 100% uptime</li>
-        </ul>
-
-        <h2>Техническая поддержка</h2>
-        <p>Базовая техническая поддержка включает:</p>
-        <ul>
-            <li>Настройку и развертывание вашего проекта</li>
-            <li>Базовое обслуживание системы</li>
-            <li>Консультации по оптимизации</li>
+            <li>Полный доступ к ресурсам сервера</li>
+            <li>Возможность использования GPU для вычислений</li>
+            <li>Высокая производительность для любых задач</li>
+            <li>Поддержка виртуализации</li>
+            <li>Гарантированная доступность 24/7</li>
+            <li>Хостинг игровых серверов (Minecraft, CS2, Rust и другие)</li>
         </ul>
 
         <h2>Тарифы</h2>
@@ -210,28 +199,28 @@
                 </tr>
                 <tr>
                     <td>Количество доступных слотов</td>
-                    <td>6 слотов</td>
+                    <td>12 слотов</td>
                 </tr>
                 <tr>
                     <td>Ресурсы на слот</td>
-                    <td>0.5 ядра CPU, до 1 ГБ RAM</td>
+                    <td>0.5 ядра CPU, до 8 ГБ RAM, доступ к GPU</td>
                 </tr>
                 <tr>
                     <td>Стоимость первого месяца</td>
-                    <td>200 ₽/месяц</td>
+                    <td>400 ₽/месяц за слот</td>
                 </tr>
                 <tr>
                     <td>Стоимость последующих месяцев</td>
-                    <td>250 ₽/месяц</td>
+                    <td>500 ₽/месяц за слот</td>
                 </tr>
                 <tr>
                     <td>Недельная аренда</td>
-                    <td>100 ₽/неделя</td>
+                    <td>200 ₽/неделя за слот</td>
                 </tr>
             </table>
         </div>
         <p style="margin-top: 1rem; font-style: italic;">* Каждый слот представляет собой изолированное окружение с гарантированными ресурсами.<br>
-        ** При недельной аренде предоставляется полный доступ к серверу на 7 дней.</p>
+        ** Включает доступ к GPU для вычислений.</p>
 
         <div class="request-form">
             <h3>Оставить заявку</h3>
@@ -248,20 +237,26 @@
                     <label for="slots">Количество слотов:</label>
                     <select id="slots" name="slots" required>
                         <option value="">Выберите количество слотов</option>
-                        <option value="1">1 слот (200₽/мес)</option>
-                        <option value="2">2 слота (400₽/мес)</option>
-                        <option value="3">3 слота (600₽/мес)</option>
-                        <option value="4">4 слота (800₽/мес)</option>
-                        <option value="5">5 слотов (1000₽/мес)</option>
-                        <option value="6">6 слотов (1200₽/мес)</option>
+                        <option value="1">1 слот (400₽/мес)</option>
+                        <option value="2">2 слота (800₽/мес)</option>
+                        <option value="3">3 слота (1200₽/мес)</option>
+                        <option value="4">4 слота (1600₽/мес)</option>
+                        <option value="5">5 слотов (2000₽/мес)</option>
+                        <option value="6">6 слотов (2400₽/мес)</option>
+                        <option value="7">7 слотов (2800₽/мес)</option>
+                        <option value="8">8 слотов (3200₽/мес)</option>
+                        <option value="9">9 слотов (3600₽/мес)</option>
+                        <option value="10">10 слотов (4000₽/мес)</option>
+                        <option value="11">11 слотов (4400₽/мес)</option>
+                        <option value="12">12 слотов (4800₽/мес)</option>
                     </select>
                 </div>
                 <div>
                     <label for="period">Период аренды:</label>
                     <select id="period" name="period" required>
                         <option value="">Выберите период</option>
-                        <option value="week">Неделя (100₽/слот)</option>
-                        <option value="month">Месяц (200₽/слот)</option>
+                        <option value="week">Неделя (200₽/слот)</option>
+                        <option value="month">Месяц (400₽/слот)</option>
                     </select>
                 </div>
                 <div>
