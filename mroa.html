@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mROA, где ROA - remote object access</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        main p {
+            font-size: large;
+        }
+
+        .code-block {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            margin: 0;
+            color: #d4d4d4;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .code-block .keyword {
+            color: #569cd6;
+        }
+
+        .code-block .string {
+            color: #ce9178;
+        }
+
+        .code-block .comment {
+            color: #6a9955;
+        }
+
+        .code-block .class {
+            color: #4ec9b0;
+        }
+
+        .code-block .method {
+            color: #dcdcaa;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="brand">Micialware</a></li>
+                <li><a href="flagships.html">Флагманы</a></li>
+                <li><a href="index.html#projects">Другие проекты</a></li>
+                <li><a href="services.html">Услуги</a></li>
+            </ul>
+        </nav>
+        <h1>mROA, где ROA - remote object access</h1>
+        <h2>Флагман из флагманов...</h2>
+    </header>
+    <main>
+        <p>Основной проект, над которым я работаю в настоящее время. Это на данный момент такой типо gRPC с
+            блекджеком и ООП. И тут реально очень сильно развита тема объектно-ориентированного
+            программировани, как она представлена конкретно в C# на данный момент, но по сети. Данная
+            библиотека может использоваться например для очень простого внедрения микросерсной архитектуры в
+            ASP.NET Core например при помощи DI или в других случаях взаимодействия по сети.</p>
+        <p>Оно должно отлично работать в теории, но на самом деле изначально для этого не предполагалось.</p>
+        <p>Изначально требовалось реализовать общение между клиентов и сервером через объекты по средством gRPC в рамках Unity. Однако
+            после безуспешных поиспков способов реализовать такое на gRPC была написана первая, намного более корявая версия mROA, позволявшаяя передавать своеобразные ссылки на объекты с сервера на клиент, а в последствии и с клиента на сервер и использовать их для удаленного вызова методов</p>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Моя страница. Наверное какие-то права защищены!!! <span id="random-emoji"></span></p>
+    </footer>
+
+    <script src="scripts.js">
+    </script>
+
+</body>
+
+</html>

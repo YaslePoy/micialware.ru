@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Услуги программиста">
+    <meta name="description" content="Флагманские проекты">
     <link rel="icon" type="image/png" href="img/icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Услуги</title>
+    <title>Флагманские проекты</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,14 +22,17 @@
             background: linear-gradient(to bottom, #1a1a2e, #16213e);
             color: white;
         }
+
         header {
             text-align: center;
             padding-top: 0px;
             padding-bottom: 2rem;
         }
+
         nav {
             margin-bottom: 32px;
         }
+
         nav ul {
             list-style: none;
             padding: 0;
@@ -37,6 +42,7 @@
             gap: 2rem;
             align-items: center;
         }
+
         nav a {
             color: white;
             text-decoration: none;
@@ -45,18 +51,22 @@
             border-radius: 5px;
             transition: background-color 0.3s;
         }
+
         nav a:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
+
         nav a.brand {
             font-family: 'Space Grotesk', monospace;
             font-size: 1.4rem;
             font-weight: 600;
             color: #e94560;
         }
+
         nav a.brand:hover {
             color: #ff6b81;
         }
+
         main {
             padding: 2rem 0;
             background: rgba(255, 255, 255, 0.05);
@@ -64,50 +74,73 @@
             padding: 2rem;
             backdrop-filter: blur(5px);
         }
+
         footer {
             text-align: center;
             padding: 1rem 0;
             margin-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        .service-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+
+        .project-grid {
             display: flex;
-            gap: 2rem;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
         }
-        .service-card .content {
-            flex: 1;
-        }
-        .service-card img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
         }
-        .service-card h3 {
-            margin-top: 0;
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card h3 {
             color: #e94560;
+            margin-top: 0;
+            font-size: 1.5rem;
         }
-        .service-card .terms-link {
+
+        .project-card p {
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .project-card .more-link {
             display: inline-block;
-            margin-top: 1rem;
             color: #e94560;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
         }
-        .service-card .terms-link:hover {
+
+        .project-card .more-link:hover {
             color: #ff6b81;
             text-decoration: underline;
+        }
+
+        .project-card img {
+            width: 200px;
+            height: 200px;
         }
 
         @media (max-width: 768px) {
@@ -139,24 +172,25 @@
                 font-size: 1.4rem;
             }
 
-            .service-card {
+            .project-card {
                 flex-direction: column;
                 text-align: center;
                 padding: 1rem;
             }
 
-            .service-card img {
+            .project-card img {
                 width: 150px;
                 height: 150px;
                 margin-bottom: 1rem;
             }
 
-            .service-card .content {
+            .project-card-text {
                 width: 100%;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -167,42 +201,42 @@
                 <li><a href="services.html">Услуги</a></li>
             </ul>
         </nav>
-        <h1>Услуги</h1>
+        <h1>Флагманские проекты</h1>
+        <h2>Основные проекты, которым уделяется наибольшее внимание</h2>
     </header>
 
     <main>
-        <div class="service-card">
-            <img src="img/arma76.png" alt="Raspberry Pi хостинг">
-            <div class="content">
-                <h3>Простой хостинг</h3>
-                <p>Хостинг на базе Raspberry Pi с предоставлением субдомена. Идеальное решение для небольших проектов и тестирования.</p>
-                <ul>
-                    <li>Хостинг на Raspberry Pi</li>
-                    <li>Предоставление субдомена</li>
-                    <li>Подходит для небольших проектов</li>
-                </ul>
-                <a href="terms-basic.html" class="terms-link">Условия использования →</a>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="img/mroaLogo.png" alt="mROA" />
+                <div class="project-card-text">
+                    <h3>mROA</h3>
+                    <p>Основной проект, над которым я работаю в настоящее время. Это на данный момент такой типо gRPC с
+                        блекджеком и ООП. И тут реально очень сильно развита тема объектно-ориентированного
+                        программировани, как она представлена конкретно в C# на данный момент, но по сети. Данная
+                        библиотека может использоваться например для очень простого внедрения микросерсной архитектуры в
+                        ASP.NET Core например при помощи DI или в других случаях взаимодействия по сети.</p>
+                    <a href="mroa.html" class="more-link">Подробнее →</a>
+                </div>
+
             </div>
-        </div>
-        <div class="service-card">
-            <img src="img/7700x.webp" alt="Ryzen сервер">
-            <div class="content">
-                <h3>Unlimited-хостинг</h3>
-                <p>Мощный хостинг на сервере с процессором Ryzen 7 7700x. Максимальная производительность для ваших проектов.</p>
-                <ul>
-                    <li>Хостинг на Ryzen 7 7700x</li>
-                    <li>Высокая производительность</li>
-                    <li>Подходит для крупных проектов</li>
-                </ul>
-                <a href="terms-unlimited.html" class="terms-link">Условия использования →</a>
+            <div class="project-card">
+                <img src="img/mroacgtLogo.png" alt="mROA.CodegenTools" />
+                <div class="project-card-text">
+                    <h3>mROA.CodegenTools</h3>
+                    <p>Инструментарий для генерации кода, разрабатываемый в рамках проекта mROA. Здесь будет описание
+                        функциональности и возможностей инструмента.</p>
+                    <a href="#" class="more-link">Подробнее →</a>
+                </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Моя страница. Все права защищены.	<span id="random-emoji"></span></p>
+        <p>&copy; 2025 Моя страница. Наверное какие-то права защищены!!! <span id="random-emoji"></span></p>
     </footer>
 
     <script src="scripts.js"></script>
 </body>
-</html> 
+
+</html>
