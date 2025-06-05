@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,14 +20,17 @@
             background: linear-gradient(to bottom, #1a1a2e, #16213e);
             color: white;
         }
+
         header {
             text-align: center;
             padding-top: 0px;
             padding-bottom: 2rem;
         }
+
         nav {
             margin-bottom: 32px;
         }
+
         nav ul {
             list-style: none;
             padding: 0;
@@ -36,6 +40,7 @@
             gap: 2rem;
             align-items: center;
         }
+
         nav a {
             color: white;
             text-decoration: none;
@@ -44,34 +49,58 @@
             border-radius: 5px;
             transition: background-color 0.3s;
         }
+
         nav a:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
+
         nav a.brand {
             font-family: 'Space Grotesk', monospace;
             font-size: 1.4rem;
             font-weight: 600;
             color: #e94560;
         }
+
         nav a.brand:hover {
             color: #ff6b81;
         }
-        main {
+
+        main,
+        .timer {
             padding: 2rem 0;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             padding: 2rem;
             backdrop-filter: blur(5px);
         }
+
+        .timer {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .timer h2 {
+            margin-top: 0;
+            color: #e94560;
+        }
+
+        .timer p {
+            margin: 0.5rem 0;
+        }
+
         footer {
             text-align: center;
             padding: 1rem 0;
             margin-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
-        h1, h2 {
+
+        h1,
+        h2 {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
+
         .service-card {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
@@ -82,9 +111,11 @@
             gap: 2rem;
             align-items: center;
         }
+
         .service-card .content {
             flex: 1;
         }
+
         .service-card img {
             width: 200px;
             height: 200px;
@@ -92,10 +123,12 @@
             border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         .service-card h3 {
             margin-top: 0;
             color: #e94560;
         }
+
         .service-card .terms-link {
             display: inline-block;
             margin-top: 1rem;
@@ -104,6 +137,7 @@
             font-weight: bold;
             transition: color 0.3s;
         }
+
         .service-card .terms-link:hover {
             color: #ff6b81;
             text-decoration: underline;
@@ -177,6 +211,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -185,10 +220,35 @@
                 <li><a href="flagships.html">Флагманы</a></li>
                 <li><a href="index.html#projects">Другие проекты</a></li>
                 <li><a href="services.html">Услуги</a></li>
-                <li><a href="https://github.com/YaslePoy" class="github-link" target="_blank"><img src="img/github-mark-white.svg" alt="GitHub">GitHub</a></li>
+                <li><a href="https://github.com/YaslePoy" class="github-link" target="_blank"><img
+                            src="img/github-mark-white.svg" alt="GitHub">GitHub</a></li>
             </ul>
         </nav>
         <h1>Услуги</h1>
+        <div class="timer">
+            <h2>Удивительная скидка 000%</h2>
+            <p>осталось до окончания акции</p>
+            <p id="timer-watch" style="font-size: 30px;">00:00:00</p>
+            <script>
+                const timer = document.getElementById("timer-watch")
+                let original_time = Date.now() + 1000 * 60 * 60 * 19;
+                function update() {
+                    let r = Math.random() ;
+                    console.log(r);
+                    if (r > 0.4){
+                        original_time += 2000;
+                    }
+                    let distance = original_time - Date.now();
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+                    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+                    const seconds = Math.floor((distance / 1000) % 60);
+                    timer.innerHTML = `${days}:${hours}:${minutes}:${seconds}`;
+                }
+
+                setInterval(update, 1000);
+            </script>
+        </div>
     </header>
 
     <main>
@@ -196,7 +256,8 @@
             <img src="img/arma76.png" alt="Raspberry Pi хостинг">
             <div class="content">
                 <h3>Простой хостинг</h3>
-                <p>Хостинг на базе Raspberry Pi с предоставлением субдомена. Идеальное решение для небольших проектов и тестирования.</p>
+                <p>Хостинг на базе Raspberry Pi с предоставлением субдомена. Идеальное решение для небольших проектов и
+                    тестирования.</p>
                 <ul>
                     <li>Хостинг на Raspberry Pi</li>
                     <li>Предоставление субдомена</li>
@@ -209,7 +270,8 @@
             <img src="img/7700x.webp" alt="Ryzen сервер">
             <div class="content">
                 <h3>Unlimited-хостинг</h3>
-                <p>Мощный хостинг на сервере с процессором Ryzen 7 7700x. Максимальная производительность для ваших проектов.</p>
+                <p>Мощный хостинг на сервере с процессором Ryzen 7 7700x. Максимальная производительность для ваших
+                    проектов.</p>
                 <ul>
                     <li>Хостинг на Ryzen 7 7700x</li>
                     <li>Высокая производительность</li>
@@ -221,9 +283,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Моя страница. Все права защищены.	<span id="random-emoji"></span></p>
+        <p>&copy; 2025 Моя страница. Все права защищены. <span id="random-emoji"></span></p>
     </footer>
 
     <script src="scripts.js"></script>
 </body>
-</html> 
+
+</html>
