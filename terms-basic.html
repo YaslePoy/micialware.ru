@@ -337,22 +337,44 @@
                     <label for="period">Период аренды:</label>
                     <select id="period" name="period" required>
                         <option value="">Выберите период</option>
-                        <option value="week">Неделя (100₽/слот)</option>
-                        <option value="month">Месяц (200₽/слот)</option>
+                        <option value="0">Неделя (100₽/слот)</option>
+                        <option value="1">Месяц (200₽/слот)</option>
                     </select>
                 </div>
                 <div>
                     <label for="message">Опишите ваш проект:</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
-                <button type="submit">Отправить заявку</button>
+                <button type="submit" onclick="order()">Отправить заявку</button>
             </form>
+
+            <script>
+                async function order() {
+                    let currentOrder = {
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        slots: parseInt(document.getElementById("slots").value),
+                        period: parseInt(document.getElementById("period").value),
+                        server_type: 0,
+                        project: document.getElementById("message").value,
+                    }
+                    alert(JSON.stringify(currentOrder))
+                    await fetch("http://api.micialware.ru/order", {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json;charset=utf-8'
+                        },
+                        body: JSON.stringify(currentOrder)
+                    })
+                }
+            </script>
         </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Моя страница. Все права защищены.	<span id="random-emoji"></span></p>
     </footer>
+
 
     <script src="scripts.js"></script>
 </body>
