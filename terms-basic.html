@@ -387,8 +387,7 @@
                     project: document.getElementById("message").value,
                 };
 
-
-                await fetch('http://localhost:81/order', {
+                await fetch('http://api.micialware.ru/order', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
