@@ -72,6 +72,7 @@ context.AddSource($"{className}.g.cs", SourceText.From(code, Encoding.UTF8));
         перекликается с шаблонами T4. Однако в отличие от T4, код исполняется по-нормальному в среде C# кода, а не как
         то там среди генерируемого кода.
     </p>
+    <h2>Теги</h2>
     <p>Каждый тег в файле, который определяет так называемый "Документ", начинается с
         <codesp>&lt;!</codesp>
         после чего идет тип тега, и заканчивается
@@ -92,11 +93,37 @@ context.AddSource($"{className}.g.cs", SourceText.From(code, Encoding.UTF8));
         . Между головой и хвостом тега заключается текст, который он определяет.
     </p>
     <p>
-        Например, тут тег <codesp>&lt;!D someLinkName&gt;</codesp> определяет текст "qwerty text", а <codesp>&lt;!L someLinkName&gt;</codesp> вставляет его.
+        Например, тут тег
+        <codesp>&lt;!D someLinkName&gt;</codesp>
+        определяет текст "qwerty text", а
+        <codesp>&lt;!L someLinkName&gt;</codesp>
+        вставляет его.
     </p>
     <pre><code class="language-csharp">&lt;!L someLinkName&gt;&lt;!L someLinkName&gt;&lt;!L someLinkName&gt;
 &lt;!D someLinkName&gt;qwerty text&lt;!D&gt;</code></pre>
-    <p>При компиляции такого документа шаблона на выходе получится <codesp>qwerty textqwerty textqwerty text</codesp> потому что были прописаны 3 ссылки на одно и то же определение</p>
+    <p>При компиляции такого документа шаблона на выходе получится
+        <codesp>qwerty textqwerty textqwerty text</codesp>
+        потому что были прописаны 3 ссылки на одно и то же определение
+    </p>
+    <p>Последним компонентом этой библиотеки является Insert tag. Он обозначается как
+        <codesp>&lt;!I&gt;</codesp>
+        . Он работает похоже на Link tag, но он работает динамически, а не статически. То, что этот тег должен означать
+        задается еще до компиляции документа. Задать содержание тега можно при помощи метода Insert у документа шаблона.
+        В этот тег можно вставить строку или другой тег, например тег Define.
+        Тег Insert может менять логику своей работы при помощи опций. Они указываются после названия через пробел.
+    </p>
+    <p>
+        На данный момент реализованно 2 опции: repeat и separate. Они связаны между собой и параметр separate не может
+        быть использован без repeat. Опция repeat позволяет не просто заменять указанный Insert тег по его имени на
+        строку
+        или другой тег, а добавлять копию этого Insert тега после выбранного неограниченное количество раз и вставлять
+        контент уже в него. Для использования этой опции нужно прописать после названия
+        <codesp>r</codesp>
+    </p>
+
+    <pre><code class="language-csharp">&lt;!I someInsertName r sep nextLine&gt;&lt;!D nextLine&gt;
+&lt;!D&gt;</code></pre>
+
 </main>
 <footer>
     <p>&copy; 2025 Моя страница. Наверное какие-то права защищены!!! <span id="random-emoji"></span></p>
